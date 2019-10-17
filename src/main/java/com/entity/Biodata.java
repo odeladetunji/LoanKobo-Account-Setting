@@ -12,7 +12,7 @@ public class Biodata {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public long Id;
+    public long id;
 
     @JsonProperty
     public String email;
