@@ -10,31 +10,31 @@ import javax.persistence.Id;
 @Data
 public class Registration {
 
-    @Id
+    @JsonProperty("Id")
     private long Id;
 
-    @JsonProperty
+    @JsonProperty("Email")
     public String email;
 
-    @JsonProperty
+    @JsonProperty("Password")
     public String password;
 
-    @JsonProperty
+    @JsonProperty("CompanyName")
     public String companyName;
 
-    @JsonProperty
+    @JsonProperty("Country")
     public  String country;
 
-    @JsonProperty
+    @JsonProperty("TimeZone")
     public String timeZone;
 
-    @JsonProperty
+    @JsonProperty("Currency")
     public  String currency;
 
-    @JsonProperty
+    @JsonProperty("FirstName")
     public String firstName;
 
-    @JsonProperty
+    @JsonProperty("LastName")
     public String lastName;
 
     public Registration(String email, String password, String companyName, String country, String timeZone,
@@ -48,6 +48,8 @@ public class Registration {
         this.timeZone = timeZone;
         this.currency = currency;
     }
+
+    private Registration(){}
 }
 
 

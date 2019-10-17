@@ -11,4 +11,12 @@ public class SignupDetials {
     @JsonProperty
     public String password;
 
+    public SignupDetials(){}
+
 }
+
+
+
+
+
+

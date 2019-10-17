@@ -18,6 +18,8 @@ public class User {
     public String email;
     @JsonProperty
     public String password;
+
+    public User(){}
 }
 
 

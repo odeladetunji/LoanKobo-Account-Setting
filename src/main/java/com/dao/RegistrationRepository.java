@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface RegistrationRepository extends CrudRepository<Biodata, Long> {
     List<Biodata> findDistinctByEmail(String email);
+    List<Biodata> findDistinctById(Long id);
 }
 
 

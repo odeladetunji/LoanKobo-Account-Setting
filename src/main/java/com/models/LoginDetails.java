@@ -9,6 +9,8 @@ public class LoginDetails {
     public String email;
     @JsonProperty
     public String password;
+
+    public LoginDetails(){}
 }
 
 
