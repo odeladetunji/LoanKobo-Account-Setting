@@ -36,7 +36,6 @@ public class EndPoints implements RegistrationServiceInterface {
         }
 
         return dResult;
-//        return true;
     }
 
     @Override
