@@ -1,42 +1,44 @@
 package com.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import javax.persistence.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
+@Data
 @Entity
+@Table(name = "biodata")
 public class Biodata {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     public long id;
 
-    @JsonProperty("Email")
+    @Column(name = "email")
     public String email;
 
-    @JsonProperty("Password")
+    @Column(name = "password")
     public String password;
 
-    @JsonProperty("CompanyName")
+    @Column(name =  "company_name")
     public String companyName;
 
-    @JsonProperty("Country")
+    @Column(name = "country")
     public  String country;
 
-    @JsonProperty("TimeZone")
+    @Column(name = "timezone")
     public String timeZone;
 
-    @JsonProperty("Currency")
+    @Column(name = "currency")
     public  String currency;
 
-    @JsonProperty("FirstName")
+    @Column(name = "firstname")
     public String firstName;
 
-    @JsonProperty("LastName")
+    @Column(name = "lastname")
     public String lastName;
+
+    @OneToOne (mappedBy = "biodata")
+    public User user;
 
     public Biodata(){}
 

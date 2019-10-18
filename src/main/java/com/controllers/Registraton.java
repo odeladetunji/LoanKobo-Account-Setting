@@ -17,7 +17,7 @@ public class Registraton {
     @ResponseBody
     @GetMapping(value = "/")
     public String ping(){
-        return "Ping Successfull:  Spring Application";
+        return "Ping Successfull";
     }
 
     @ResponseBody

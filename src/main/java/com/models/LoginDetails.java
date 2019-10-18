@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class LoginDetails {
-    @JsonProperty
+    @JsonProperty("Email")
     public String email;
-    @JsonProperty
+    @JsonProperty("Password")
     public String password;
 
     public LoginDetails(){}
